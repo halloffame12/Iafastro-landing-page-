@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Astronautical Federation</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1a237e',secondary:'#37474f'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+}
+.header {
+transition: background-color 0.3s ease;
+}
+.dropdown {
+display: none;
+}
+.dropdown-trigger:hover .dropdown {
+display: block;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=stunning%20space%20scene%20with%20Earth%20seen%20from%20space%2C%20stars%2C%20nebulae%2C%20and%20spacecraft%20in%20orbit%2C%20dramatic%20lighting%2C%20photorealistic%2C%20high%20resolution%2C%20professional%20photography%2C%20NASA%20style%20imagery%2C%20with%20deep%20blues%20and%20purples%2C%20perfect%20for%20website%20hero%20background&width=1920&height=1080&seq=123456&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.hero-overlay {
+background: linear-gradient(90deg, rgba(26, 35, 126, 0.9) 0%, rgba(26, 35, 126, 0.7) 50%, rgba(26, 35, 126, 0.4) 100%);
+}
+input:focus {
+outline: none;
+}
+.event-timeline-item:not(:last-child)::after {
+content: '';
+position: absolute;
+left: 15px;
+top: 30px;
+bottom: -10px;
+width: 2px;
+background-color: #e5e7eb;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header Section -->
+<header class="header fixed w-full z-50 bg-transparent">
+<div class="container mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-white">logo</a>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<div class="dropdown-trigger relative">
+<a href="#" class="text-white hover:text-gray-200 font-medium">About</a>
+<div class="dropdown absolute top-full left-0 mt-2 w-48 bg-white rounded shadow-lg z-10">
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mission & Vision</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">History</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Leadership</a>
+</div>
+</div>
+<div class="dropdown-trigger relative">
+<a href="#" class="text-white hover:text-gray-200 font-medium">Events</a>
+<div class="dropdown absolute top-full left-0 mt-2 w-48 bg-white rounded shadow-lg z-10">
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">IAC 2025</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">GLEC 2025</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Space Symposium</a>
+</div>
+</div>
+<div class="dropdown-trigger relative">
+<a href="#" class="text-white hover:text-gray-200 font-medium">Membership</a>
+<div class="dropdown absolute top-full left-0 mt-2 w-48 bg-white rounded shadow-lg z-10">
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Benefits</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">How to Join</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Member Directory</a>
+</div>
+</div>
+<div class="dropdown-trigger relative">
+<a href="#" class="text-white hover:text-gray-200 font-medium">Resources</a>
+<div class="dropdown absolute top-full left-0 mt-2 w-48 bg-white rounded shadow-lg z-10">
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Publications</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Research Papers</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Digital Library</a>
+</div>
+</div>
+<a href="#" class="text-white hover:text-gray-200 font-medium">News</a>
+<a href="#" class="text-white hover:text-gray-200 font-medium">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="w-8 h-8 flex items-center justify-center text-white cursor-pointer">
+<i class="ri-search-line ri-lg"></i>
+</div>
+<a href="#" class="bg-white text-primary px-4 py-2 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition duration-300">Member Login</a>
+<div class="w-8 h-8 flex items-center justify-center text-white cursor-pointer md:hidden">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full h-screen relative">
+<div class="hero-overlay absolute inset-0"></div>
+<div class="container mx-auto px-6 h-full flex items-center relative z-10">
+<div class="w-full md:w-1/2 text-white">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Connecting Space Communities Worldwide</h1>
+<p class="text-lg md:text-xl mb-8 max-w-lg">The International Astronautical Federation (IAF) is the world's leading space advocacy organization with over 400 members from 71 countries.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#" class="bg-white text-primary px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition duration-300">Join IAF</a>
+<a href="#" class="border-2 border-white text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-white/10 transition duration-300">Learn More</a>
+</div>
+</div>
+</div>
+</section>
+<!-- News & Updates Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="flex justify-between items-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900">Latest News & Updates</h2>
+<div class="flex space-x-2">
+<button class="px-4 py-2 !rounded-button bg-primary text-white whitespace-nowrap">All News</button>
+<button class="px-4 py-2 !rounded-button bg-white border border-gray-200 text-gray-700 whitespace-nowrap">Events</button>
+<button class="px-4 py-2 !rounded-button bg-white border border-gray-200 text-gray-700 whitespace-nowrap">Press Releases</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- News Card 1 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=international%20space%20conference%20with%20diverse%20attendees%2C%20professional%20setting%2C%20space%20industry%20leaders%20gathered%20in%20modern%20conference%20hall%2C%20presentation%20screens%20showing%20space%20technology%2C%20professional%20photography&width=600&height=400&seq=123457&orientation=landscape" alt="IAC 2025 Announcement" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="text-sm text-gray-500 mb-2">May 5, 2025</div>
+<h3 class="text-xl font-semibold mb-3">IAC 2025 Registration Now Open for Paris Conference</h3>
+<p class="text-gray-600 mb-4">The International Astronautical Congress 2025 registration portal is now open. Early bird rates available until July 31st for the world's premier space event.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Read More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- News Card 2 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=space%20industry%20partnership%20signing%20ceremony%2C%20executives%20shaking%20hands%2C%20corporate%20meeting%20room%20with%20space%20company%20logos%20visible%2C%20professional%20business%20setting%2C%20formal%20attire&width=600&height=400&seq=123458&orientation=landscape" alt="New Partnership" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="text-sm text-gray-500 mb-2">May 2, 2025</div>
+<h3 class="text-xl font-semibold mb-3">IAF Announces Strategic Partnership with SpaceX for Educational Initiatives</h3>
+<p class="text-gray-600 mb-4">The new collaboration will focus on expanding STEM education opportunities and creating pathways for students to enter the space industry workforce.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Read More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- News Card 3 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20young%20space%20researchers%20receiving%20awards%20on%20stage%2C%20formal%20award%20ceremony%2C%20professional%20photography%2C%20space-themed%20backdrop%2C%20professional%20setting&width=600&height=400&seq=123459&orientation=landscape" alt="Award Winners" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="text-sm text-gray-500 mb-2">April 28, 2025</div>
+<h3 class="text-xl font-semibold mb-3">2025 IAF Excellence in Space Research Award Winners Announced</h3>
+<p class="text-gray-600 mb-4">Six outstanding researchers from across the globe have been recognized for their groundbreaking contributions to space science and technology.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Read More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<a href="#" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-gray-50 transition duration-300">View All News</a>
+</div>
+</div>
+</section>
+<!-- Events & Conferences Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="flex justify-between items-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900">Upcoming Events & Conferences</h2>
+<a href="#" class="text-primary font-medium flex items-center">
+View Calendar
+<i class="ri-calendar-line ml-1"></i>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Timeline Column -->
+<div class="lg:col-span-1">
+<div class="bg-gray-50 p-6 rounded-lg">
+<h3 class="text-xl font-semibold mb-6">Event Timeline</h3>
+<div class="space-y-6">
+<!-- Timeline Item 1 -->
+<div class="event-timeline-item relative pl-10">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<i class="ri-calendar-event-fill text-white"></i>
+</div>
+<div class="text-sm font-medium text-primary mb-1">May 15-17, 2025</div>
+<h4 class="font-semibold">Global Space Exploration Conference</h4>
+<p class="text-sm text-gray-600">Vienna, Austria</p>
+</div>
+<!-- Timeline Item 2 -->
+<div class="event-timeline-item relative pl-10">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<i class="ri-calendar-event-fill text-gray-600"></i>
+</div>
+<div class="text-sm font-medium text-gray-600 mb-1">June 22-24, 2025</div>
+<h4 class="font-semibold">Space Resources Symposium</h4>
+<p class="text-sm text-gray-600">Denver, Colorado, USA</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="event-timeline-item relative pl-10">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<i class="ri-calendar-event-fill text-gray-600"></i>
+</div>
+<div class="text-sm font-medium text-gray-600 mb-1">August 10-12, 2025</div>
+<h4 class="font-semibold">Small Satellites Conference</h4>
+<p class="text-sm text-gray-600">Singapore</p>
+</div>
+<!-- Timeline Item 4 -->
+<div class="event-timeline-item relative pl-10">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+<i class="ri-calendar-event-fill text-gray-600"></i>
+</div>
+<div class="text-sm font-medium text-gray-600 mb-1">September 28-October 2, 2025</div>
+<h4 class="font-semibold">International Astronautical Congress</h4>
+<p class="text-sm text-gray-600">Paris, France</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Event Column -->
+<div class="lg:col-span-2">
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=global%20space%20exploration%20conference%20in%20Vienna%2C%20Austria%2C%20modern%20conference%20center%20with%20space-themed%20banners%20and%20displays%2C%20professional%20event%20photography%2C%20attendees%20networking%2C%20space%20industry%20exhibition&width=800&height=400&seq=123460&orientation=landscape" alt="Global Space Exploration Conference" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-8">
+<div class="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">Featured Event</div>
+<h3 class="text-2xl font-bold mb-3">Global Space Exploration Conference (GLEX) 2025</h3>
+<div class="flex items-center text-gray-600 mb-4">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</div>
+<span>May 15-17, 2025</span>
+<div class="w-5 h-5 flex items-center justify-center mx-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Hofburg Palace, Vienna, Austria</span>
+</div>
+<p class="text-gray-600 mb-6">Join the world's leading space agencies, industry leaders, and researchers for three days of intensive discussions on the future of space exploration. GLEX 2025 will feature keynote presentations, technical sessions, and networking opportunities focused on lunar exploration, Mars missions, and beyond.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-primary/90 transition duration-300">Register Now</a>
+<a href="#" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-gray-50 transition duration-300">Event Details</a>
+</div>
+<div class="mt-6 flex items-center">
+<div class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Early Bird Registration: 30% Off Until June 1</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Member Organizations Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Member Organizations</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">The IAF brings together over 400 member organizations from 71 countries, representing all sectors of the global space community.</p>
+</div>
+<div class="mb-8 flex justify-center">
+<div class="inline-flex bg-white p-1 rounded-full shadow-sm">
+<button class="px-4 py-2 !rounded-full bg-primary text-white whitespace-nowrap">All Members</button>
+<button class="px-4 py-2 !rounded-full text-gray-700 whitespace-nowrap">Space Agencies</button>
+<button class="px-4 py-2 !rounded-full text-gray-700 whitespace-nowrap">Industry</button>
+<button class="px-4 py-2 !rounded-full text-gray-700 whitespace-nowrap">Academic</button>
+<button class="px-4 py-2 !rounded-full text-gray-700 whitespace-nowrap">Associations</button>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Member Logo 1 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-rocket-2-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">NASA</p>
+</div>
+</div>
+<!-- Member Logo 2 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-planet-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">ESA</p>
+</div>
+</div>
+<!-- Member Logo 3 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-space-ship-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">SpaceX</p>
+</div>
+</div>
+<!-- Member Logo 4 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-rocket-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">JAXA</p>
+</div>
+</div>
+<!-- Member Logo 5 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-flight-takeoff-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">Boeing</p>
+</div>
+</div>
+<!-- Member Logo 6 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-global-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">ISRO</p>
+</div>
+</div>
+<!-- Member Logo 7 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-satellite-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">Airbus</p>
+</div>
+</div>
+<!-- Member Logo 8 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-building-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">Lockheed Martin</p>
+</div>
+</div>
+<!-- Member Logo 9 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-building-4-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">Blue Origin</p>
+</div>
+</div>
+<!-- Member Logo 10 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-earth-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">CNSA</p>
+</div>
+</div>
+<!-- Member Logo 11 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-meteor-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">Virgin Galactic</p>
+</div>
+</div>
+<!-- Member Logo 12 -->
+<div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center h-32 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
+<div class="text-center">
+<div class="w-12 h-12 mx-auto flex items-center justify-center text-primary mb-2">
+<i class="ri-planet-fill ri-2x"></i>
+</div>
+<p class="font-medium text-gray-800">Roscosmos</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<a href="#" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-gray-50 transition duration-300">View All Members</a>
+</div>
+</div>
+</section>
+<!-- Resources Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Resources & Publications</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Access the latest research, publications, and industry reports from the global space community.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Resource Card 1 -->
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1">
+<div class="p-6">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+<i class="ri-file-paper-2-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Research Papers</h3>
+<p class="text-gray-600 mb-4">Access peer-reviewed papers from IAF conferences and journals covering all aspects of space science and technology.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Browse Papers
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Resource Card 2 -->
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1">
+<div class="p-6">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+<i class="ri-book-open-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Digital Library</h3>
+<p class="text-gray-600 mb-4">Our comprehensive digital library contains over 50,000 documents, presentations, and multimedia resources.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Access Library
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Resource Card 3 -->
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1">
+<div class="p-6">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+<i class="ri-bar-chart-box-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Industry Reports</h3>
+<p class="text-gray-600 mb-4">Stay informed with comprehensive reports on space industry trends, market analysis, and economic forecasts.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+View Reports
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Resource Card 4 -->
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1">
+<div class="p-6">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+<i class="ri-vidicon-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Video Archive</h3>
+<p class="text-gray-600 mb-4">Watch recordings of keynote speeches, panel discussions, and technical presentations from past IAF events.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Browse Videos
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-16 bg-gray-50 rounded-lg p-8">
+<div class="flex flex-col md:flex-row items-center justify-between">
+<div class="mb-6 md:mb-0 md:mr-8">
+<h3 class="text-2xl font-bold mb-3">Featured Publication</h3>
+<h4 class="text-xl font-semibold text-primary mb-2">Space Economy Report 2025</h4>
+<p class="text-gray-600 mb-4">Our comprehensive analysis of the global space economy, including market trends, investment opportunities, and future projections for the next decade.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-primary/90 transition duration-300">Download Report</a>
+<a href="#" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-gray-50 transition duration-300">View Executive Summary</a>
+</div>
+</div>
+<div class="w-full md:w-1/3 flex justify-center">
+<div class="w-64 h-80 bg-white rounded-lg shadow-md p-4 transform rotate-3">
+<div class="w-full h-full bg-primary/10 rounded flex items-center justify-center">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto flex items-center justify-center text-primary mb-3">
+<i class="ri-file-chart-line ri-3x"></i>
+</div>
+<h5 class="text-lg font-bold text-primary">Space Economy Report</h5>
+<p class="text-sm text-gray-600">2025 Edition</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-primary text-white">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Join the Global Space Community</h2>
+<p class="text-lg mb-8">Become a member of the International Astronautical Federation and connect with the world's leading space organizations, experts, and researchers.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#" class="bg-white text-primary px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-gray-100 transition duration-300">Become a Member</a>
+<a href="#" class="border-2 border-white text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-white/10 transition duration-300">Learn About Benefits</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+<!-- Column 1: About -->
+<div class="lg:col-span-2">
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
+<p class="text-gray-400 mb-6">The International Astronautical Federation (IAF) is the world's leading space advocacy body with over 400 members from 71 countries, including all leading space agencies, companies, research institutions, universities, societies, and museums worldwide.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition duration-300">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition duration-300">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition duration-300">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition duration-300">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<!-- Column 2: Quick Links -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About IAF</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Events & Conferences</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Membership</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Resources</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">News & Updates</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+</ul>
+</div>
+<!-- Column 3: Resources -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Resources</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Research Papers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Digital Library</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Industry Reports</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Video Archive</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Publications</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Press Releases</a></li>
+</ul>
+</div>
+<!-- Column 4: Newsletter -->
+<div>
+<h3 class="text-lg font-semibold mb-4">Stay Updated</h3>
+<p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates, events, and news.</p>
+<form>
+<div class="flex flex-col space-y-3">
+<input type="email" placeholder="Your email address" class="bg-gray-800 border-none text-white px-4 py-3 rounded focus:ring-2 focus:ring-primary">
+<button type="submit" class="bg-primary text-white px-4 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-primary/90 transition duration-300">Subscribe</button>
+</div>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<p class="text-gray-400">&copy; 2025 International Astronautical Federation. All rights reserved.</p>
+</div>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Sticky header
+const header = document.querySelector('.header');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+header.classList.add('bg-primary');
+header.classList.remove('bg-transparent');
+} else {
+header.classList.remove('bg-primary');
+header.classList.add('bg-transparent');
+}
+});
+// Mobile menu functionality
+const mobileMenuButton = document.querySelector('.ri-menu-line').parentElement;
+const nav = document.querySelector('nav');
+let isMenuOpen = false;
+mobileMenuButton.addEventListener('click', () => {
+isMenuOpen = !isMenuOpen;
+if (isMenuOpen) {
+nav.classList.remove('hidden');
+nav.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-primary', 'p-4');
+} else {
+nav.classList.add('hidden');
+nav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-primary', 'p-4');
+}
+});
+// Search functionality
+const searchButton = document.querySelector('.ri-search-line').parentElement;
+searchButton.addEventListener('click', () => {
+const searchModal = document.createElement('div');
+searchModal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+searchModal.innerHTML = `
+<div class="bg-white rounded-lg p-6 w-full max-w-2xl mx-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-semibold">Search</h3>
+<button class="text-gray-500 hover:text-gray-700" id="closeSearch">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div class="relative">
+<input type="text" placeholder="Search for articles, events, or resources..." 
+class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+<button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-primary">
+<i class="ri-search-line"></i>
+</button>
+</div>
+</div>
+`;
+document.body.appendChild(searchModal);
+document.getElementById('closeSearch').addEventListener('click', () => {
+document.body.removeChild(searchModal);
+});
+searchModal.addEventListener('click', (e) => {
+if (e.target === searchModal) {
+document.body.removeChild(searchModal);
+}
+});
+});
+// Member login functionality
+const loginButton = document.querySelector('a[href="#"].bg-white.text-primary');
+loginButton.addEventListener('click', (e) => {
+e.preventDefault();
+const loginModal = document.createElement('div');
+loginModal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50';
+loginModal.innerHTML = `
+<div class="bg-white rounded-lg p-6 w-full max-w-md mx-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-semibold">Member Login</h3>
+<button class="text-gray-500 hover:text-gray-700" id="closeLogin">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+<input type="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center">
+<input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+<span class="ml-2 text-sm text-gray-600">Remember me</span>
+</label>
+<a href="#" class="text-sm text-primary hover:text-primary/80">Forgot password?</a>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition duration-300">
+Sign In
+</button>
+</form>
+</div>
+`;
+document.body.appendChild(loginModal);
+document.getElementById('closeLogin').addEventListener('click', () => {
+document.body.removeChild(loginModal);
+});
+loginModal.addEventListener('click', (e) => {
+if (e.target === loginModal) {
+document.body.removeChild(loginModal);
+}
+});
+});
+// Newsletter subscription form
+const newsletterForm = document.querySelector('footer form');
+newsletterForm.addEventListener('submit', (e) => {
+e.preventDefault();
+const emailInput = newsletterForm.querySelector('input[type="email"]');
+if (emailInput.value) {
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+successMessage.textContent = 'Thank you for subscribing to our newsletter!';
+document.body.appendChild(successMessage);
+emailInput.value = '';
+setTimeout(() => {
+document.body.removeChild(successMessage);
+}, 3000);
+}
+});
+// Add click handlers for all buttons
+document.querySelectorAll('a[href="#"], button').forEach(button => {
+if (!button.hasAttribute('type') || button.getAttribute('type') !== 'submit') {
+button.addEventListener('click', (e) => {
+e.preventDefault();
+const notification = document.createElement('div');
+notification.className = 'fixed bottom-4 right-4 bg-primary text-white px-6 py-3 rounded-lg shadow-lg z-50';
+notification.textContent = 'This feature will be available soon!';
+document.body.appendChild(notification);
+setTimeout(() => {
+document.body.removeChild(notification);
+}, 3000);
+});
+}
+});
+});
+</script>
+</body>
+</html>
